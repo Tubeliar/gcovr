@@ -922,6 +922,8 @@ def print_text_report(covdata):
     total_covered = 0
 
     # Header
+    if not options.root:
+        options.root = starting_dir
     OUTPUT.write("-" * 78 + '\n')
     OUTPUT.write(" " * 27 + "GCC Code Coverage Report\n")
     if options.root is not None:
